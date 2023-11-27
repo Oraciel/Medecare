@@ -1,0 +1,418 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 2%;
+  background-color: #242424; /* Couleur de fond de la barre de navigation */
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title {
+  margin-left: 10px;
+}
+
+.center-title {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 26px;
+}
+
+.app-logo-V1 {
+  max-width: 60px; /* Ajuster la taille du logo selon vos besoins */
+  max-height: 60px; /* Ajuster la taille du logo selon vos besoins */
+}
+
+.btn-deconnexion {
+  border-radius: 15px;
+  background: #000;
+  box-shadow: 0px 0px 30px 0px rgba(255, 0, 0, 0.3);
+  cursor: pointer;
+
+  &:hover {
+    background: red;
+  }
+}
+
+.content-container {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+.button-column {
+  flex: 3; /* Partie gauche (30%) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80vh;
+}
+
+.column-button {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.urgence {
+  background-color: rgba(222, 0, 0, 1);
+
+  &:hover {
+    background-color: rgba(222, 0, 0, 0.5);
+  }
+}
+
+.e-consultation {
+  background-color: rgba(2, 102, 0, 1);
+
+  &:hover {
+    background-color: rgba(2, 102, 0, 0.5);
+  }
+}
+
+.renseignement {
+  background-color: rgba(0, 90, 173, 1);
+
+  &:hover {
+    background-color: rgba(0, 90, 173, 0.5);
+  }
+}
+
+.consulte-historique {
+  background-color: rgba(0, 26, 158, 1);
+
+  &:hover {
+    background-color: rgba(0, 26, 158, 0.5);
+  }
+}
+
+.infos-personnels {
+  background-color: rgba(59, 0, 153, 1);
+
+  &:hover {
+    background-color: rgba(59, 0, 153, 0.5);
+  }
+}
+
+.right-container {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.right-subcontainer {
+  flex: 1;
+  background-color: #242424;
+  border-radius: 15px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%; /* La grille prendra la hauteur complète du conteneur */
+}
+
+.grid-item {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.capteurs-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.capteurs-top-part {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.capteurs-bottom-part {
+  height: 100%;
+}
+
+.traitement-top-part {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.traitement-bottom-part {
+  margin-top: 20px;
+  flex-grow: 1; /* Utilisation de flex-grow pour occuper l'espace restant */
+}
+
+.center {
+  text-align: center;
+}
+
+.big-text {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.middle-text {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.block {
+  display: block;
+}
+
+.valeur-capteur-grave {
+  color: red;
+}
+
+.valeur-capteur-moyen {
+  color: orange;
+}
+
+.valeur-capteur-normal {
+  color: chartreuse;
+}
+
+.traitement-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.traitement-table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+.traitement-table th,
+.traitement-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+thead {
+  font-size: 22px;
+}
+
+tbody {
+  font-size: 18px;
+}
+
+.main-container {
+  display: flex;
+}
+
+.sidebar {
+  flex: 2;
+}
+
+.tableau-de-bord-container-medecin {
+  height: 100vh; /* 100% de la hauteur de la vue */
+  display: flex;
+  background-color: #242424;
+  flex-direction: column; /* Aligne le contenu en colonne */
+}
+
+.column-medecin {
+  background-color: #171717;
+  border-radius: 15px;
+  margin: 10px;
+  height: 100%;
+}
+
+.decallage-droite {
+  padding-left: 15px;
+}
+
+.trie {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70vh;
+}
+
+.affichage-ordre {
+  padding-top: 10px;
+}
+
+/* Styles pour les conteneurs des checkbox et des labels */
+.checkbox-container {
+  display: flex;
+  flex-direction: column; /* Inverse l'ordre des éléments en colonne */
+  margin-top: 20px;
+}
+
+/* Styles pour inverser l'ordre des enfants des conteneurs */
+.checkbox-container-item {
+  display: flex;
+}
+
+.checkbox-container-item label {
+  order: 1; /* Inverse l'ordre des labels */
+}
+
+.checkbox-container-item input {
+  width: 50px;
+}
+
+/* Styles pour le label */
+.label-chk {
+  font-weight: bold;
+}
+
+.lien {
+  cursor: pointer;
+}
+.content-container-medecin {
+  background-color: #000;
+  flex: 8;
+  border-radius: 30px 0 0 30px;
+  display: flex;
+  flex-wrap: wrap; /* Permet aux éléments de s'enrouler sur plusieurs lignes */
+  overflow-y: scroll; /* Ajoute une barre de défilement verticale si nécessaire */
+  flex-wrap: wrap;
+  max-height: 80vh;
+  justify-content: flex-start;
+}
+
+.item {
+  width: 400px;
+  height: fit-content;
+  margin: 10px 15px 10px 15px;
+  background-color: #242424;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.item-name {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.voir-plus {
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.item-text {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.donne-normal {
+  color: chartreuse;
+}
+
+.donne-innormal {
+  color: red;
+}
+
+@media screen and (max-width: 1300px) {
+  .button-column {
+    flex: none;
+    height: 80vh;
+  }
+  .column-button {
+    font-size: 20px;
+  }
+  .content-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .title {
+    display: none;
+  }
+  .big-text {
+    font-size: 20px;
+  }
+  .capteurs-top-part {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .right-container {
+    flex: none;
+  }
+  .capteurs-top-part {
+    margin-bottom: 20px;
+  }
+  .grid-item {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .middle-text {
+    font-size: 15px;
+  }
+  .capteurs-left-part {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .trie {
+    height: auto;
+  }
+  .content-container-medecin {
+    border-radius: 0;
+    justify-content: center;
+  }
+  .sidebar {
+    background-color: black;
+    text-align: center;
+  }
+  .checkbox-container {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .traitement-top-part {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+  .traitement-left-part {
+    display: none;
+  }
+  .traitement-bottom-part {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .column-button {
+    font-size: 20px;
+  }
+  .grid-container {
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

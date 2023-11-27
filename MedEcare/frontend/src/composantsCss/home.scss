@@ -1,0 +1,95 @@
+.container-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100vh;
+  background-color: black;
+}
+
+.container-espace {
+  font-size: 48px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.container-background {
+  width: 90%;
+  aspect-ratio: 1 / 1; // Ratio 1:1 pour maintenir la même taille en largeur et en hauteur
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-background-proche {
+  background: radial-gradient(#05ff0040 0%, black 70%);
+}
+
+.container-background-malade {
+  background: radial-gradient(#0095ff40 0%, black 70%);
+}
+
+.container-background-medecin {
+  background: radial-gradient(#ff000040 0%, black 70%);
+}
+
+.container-espace-proche {
+  .container-background-proche:hover {
+    background: radial-gradient(#05ff0090 0%, black 70%);
+  }
+}
+
+.container-espace-malade:hover {
+  .container-background-malade {
+    background: radial-gradient(#0095ff90 0%, black 70%);
+  }
+}
+
+.container-espace-medecin:hover {
+  .container-background-medecin {
+    background: radial-gradient(#ff000090 0%, black 70%);
+  }
+}
+
+.big-title {
+  background-color: black;
+  position: relative;
+  top: 100px;
+  margin-top: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; // Pour centrer verticalement
+  cursor: pointer;
+
+  .app-logo {
+    max-width: 100px; // Ajustez la largeur maximale de l'image
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+  .container-espace {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .container-espace {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-home {
+    flex-direction: column;
+  }
+  .container-espace {
+    font-size: 20px;
+  }
+  .app-logo {
+    width: 50px;
+    height: 50px;
+  }
+}

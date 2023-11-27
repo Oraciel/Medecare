@@ -1,0 +1,66 @@
+.content-container-urgence {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  padding: 0 0 50px 0;
+}
+
+.title-left {
+  color: #242424;
+  cursor: default;
+}
+
+.btn-urgence {
+  background-color: black;
+  margin: 20px 0;
+  padding: 30px;
+  border-radius: 25px;
+
+  &:hover {
+    background-color: yellow;
+    color: black;
+  }
+}
+
+.btn-pompier {
+  background: #df0000;
+}
+
+.btn-samu {
+  background: #1f00df;
+}
+
+.btn-medecin {
+  background: #2b8800;
+}
+
+.btn-geste-premier-secours {
+  background: #ff7a00;
+}
+
+.very-big-text {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 480px) {
+  .top-container {
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
+    justify-content: center;
+  }
+  .title-left {
+    display: none;
+  }
+
+  .nom-personne {
+    font-size: 25px;
+  }
+  .very-big-text {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,152 @@
+.login-container,
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-connexion,
+.container-register {
+  background-color: #242424;
+  padding: 30px;
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+
+.container-connexion-proche,
+.container-register-proche {
+  box-shadow: 0px 0px 30px rgba(0, 255, 0, 0.5);
+}
+
+.container-connexion-malade,
+.container-register-malade {
+  box-shadow: 0px 0px 30px rgba(0, 148, 255, 0.5);
+}
+
+.container-connexion-medecin,
+.container-register-medecin {
+  box-shadow: 0px 0px 30px rgba(255, 0, 0, 0.5);
+}
+
+.sub-title {
+  font-size: 32px;
+  margin: 0px 0 30px 0;
+}
+
+.login-top-part,
+.register-top-part {
+  margin: 50px 0 40px 0;
+  text-align: center;
+}
+
+.big-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+  cursor: pointer;
+
+  .app-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .title {
+    margin-left: 10px;
+  }
+}
+
+.login-main-part,
+.register-main-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+
+input,
+select {
+  font-size: 19px;
+  padding: 10px;
+  width: 320px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: 2px solid #505050;
+  background: #000;
+}
+
+.icone-Interrogation {
+  margin-left: 10px;
+}
+
+.not-visible {
+  color: transparent;
+}
+
+.gray-background {
+  background-color: none;
+}
+
+.green-background {
+  background-color: rgba(0, 128, 0, 0.1);
+}
+
+.red-background {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.buttons-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  font-size: 19px;
+}
+
+// boutton
+.submit-btn {
+  font-size: 19px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.25s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sub-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  label {
+    font-size: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  input,
+  select {
+    font-size: 10px;
+    width: 200px;
+    margin-bottom: 15px;
+  }
+  .buttons-container {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+}

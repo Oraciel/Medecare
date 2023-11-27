@@ -1,0 +1,50 @@
+image: node:latest
+
+stages:
+  - build
+  #- test
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - cd MedEcare
+    - npm install
+
+#test_job:
+#  stage: test
+#  image: cypress/base
+#  script:
+#    - cd MedEcare
+#    - npm ci
+#    - npm run test:component
+
+deploy_job:
+  stage: deploy
+  tags:
+    - dind
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    DOCKER_TLS_CERTDIR: ""
+  script:
+    # Configuration SSH
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan 172.201.120.198 >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+
+    # Configuration Docker
+    - cd MedEcare
+    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    - docker build -t oraciel/medecare:latest .
+    - docker push oraciel/medecare:latest
+    - docker logout
+    - ssh -o StrictHostKeyChecking=no azureuser@172.201.120.198 "sudo docker pull oraciel/medecare:latest && sudo docker compose up -d"
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "web" && $DEPLOY_ENV == "prod"'
+  timeout: 30 minutes
